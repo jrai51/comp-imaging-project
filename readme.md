@@ -1,6 +1,21 @@
 # Depth-Only Inpainting of LiDAR Depth Maps for Autonomous Driving
 This repository contains the code accompanying the paper “Depth-Only Inpainting of Depth Maps for Autonomous Driving”, which investigates whether large missing regions in outdoor KITTI depth maps can be reconstructed without RGB, using only geometric depth context.
 
+All training, visualization, and evaluation is contained in:
+`train_visualize_evaluate.ipynb`
+
+Open the notebook and run all cells in order.
+It includes:
+- Loading KITTI data
+- Generating synthetic holes
+- Training U-Net 
+- Saving checkpoints
+- Plotting training loss
+- Producing qualitative heatmaps & reconstructions
+- Computing quantitative metrics
+
+Note that many cells are self contained so long as the trained models are saved in the correct directories. For example, running the training cells are not necessary if you have downloaded the pretrained models.
+
 ## Installation
 git clone https://github.com/jrai51/comp-imaging-project.git
 cd comp-imaging-project
@@ -51,3 +66,5 @@ comp-imaging-project/
 # Pretrained Models
 Pretrained U-Net, Autoencoder, and U-Net-no-TV checkpoints are available via Google Drive:
 Download link here:
+https://drive.google.com/drive/folders/1FYKc2KRopwvURJ8mZTvRWvKMtZuOMKDX?usp=drive_link
+
